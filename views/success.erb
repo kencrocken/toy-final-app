@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+
+
+</head>
+<body>
+
+<h2><%= "#{@message}" %></h2>
+<h3><%= "Access Token:  #{@access_token}" %></h3>
+<p><%= "#{@email_add}" %></p>
+
+<% @messages.each do |message| %>
+  <p><%= "From : #{message[:from]}" %></p>
+  <p><%= "Date : #{message[:sent_at]}" %></p>
+
+<% end %>
+<!-- printing message[:subject] gives encoding error UTF & ASCII -->
+</body>
+</html>
